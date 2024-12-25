@@ -1,0 +1,175 @@
+/* Menghapus margin dan padding dari seluruh halaman */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: white;
+}
+
+header a:link,
+header a:visited,
+header a:hover,
+header a:active {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.title {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.navmenu a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon i {
+    margin-right: 20px;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all .42s ease;
+}
+
+section {
+    padding: 5% 10%;
+}
+
+.main-home {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(header-img.jpg);
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+}
+
+.main-text {
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.main-btn {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.24);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 12px 25px;
+    border-radius: 50px;
+    transition: all 42.s ease;
+    margin-right: 20px;
+}
+
+.main-btn:hover {
+    transform: scale(1.1);
+}
+
+.our-house .container>h2 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.our-house .container>p {
+    text-align: center;
+}
+
+.our-houses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    gap: 2rem;
+    padding-top: 50px;
+}
+
+.row {
+    position: relative;
+    transition: all .40s;
+}
+
+.row img {
+    width: 100%;
+    height: auto;
+    transition: all .40s;
+}
+
+
+/* Warna default header */
+
+header {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Warna header setelah scroll */
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+header.scrolled .navmenu a {
+    color: #ffffff;
+}
+
+header.scrolled .nav-icon i {
+    color: #ffffff;
+}
+
+
+/* Footer Styles */
